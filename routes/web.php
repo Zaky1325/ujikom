@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SPPController;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,20 @@ Route::post('/kelas/create', [KelasController::class, 'store'])->name('kelas.sto
 Route::get('/kelas/update/{id_kelas}', [KelasController::class, 'edit'])->name('kelas.edit');
 Route::post('/kelas/update/{id}', [KelasController::class, 'update'])->name('kelas.update');
 Route::get('/kelas/delete{id}', [KelasController::class, 'destroy'])->name('kelas.delete');
+
+//kelas
+Route::get('/siswa/index', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa/create', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/update/{id}', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::post('/siswa/update/{id}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::get('/siswa/delete{id}', [SiswaController::class, 'destroy'])->name('siswa.delete');
+
+//user
+Route::get('/user/index', [UserController::class, 'index'])->name('user.index');
+Route::get('/user/update/{id}', [UserController::class, 'edit'])->name('user.edit');
+Route::post('/user/update/{id}', [UserController::class, 'update'])->name('user.update');
+Route::get('/user/delete{id}', [UserController::class, 'destroy'])->name('user.delete');
 
 
 

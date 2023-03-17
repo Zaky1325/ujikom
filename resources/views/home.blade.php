@@ -22,5 +22,7 @@
     </div>
 </div> --}}
 
-<h2>Dashboard</h2>
+<h1>Dashboard</h1>
+
+<h2><marquee>Hai {{ Auth::user()->name }} Selamat Datang di SIM SPP SMK Wikrama Bogor</marquee></h2>
 @endsection
